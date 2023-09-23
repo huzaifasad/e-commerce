@@ -1,0 +1,101 @@
+/* Common styles for all screen sizes */
+.cssproperty {
+  /* display: inline-block; */
+  margin-top: 0; /* Remove top margin on smaller screens */
+}
+
+.cssflex {
+  /* display: flex; */
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  background-color: #282c34;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+}
+
+.cssflex li {
+  padding-left: 40px;
+  text-decoration: none;
+}
+
+.cssflex li a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  padding: 3px;
+  border: 2px dotted transparent;
+  transition: border-color 0.3s ease; /* Add transition for border color */
+}
+
+.cssflex li a:hover {
+  border-color: white;
+}
+
+/* Responsive hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  /* background-color: #282c34; Change background color to match menu */
+  border: none;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 4px auto;
+  background-color: white;
+}
+
+.hamburger.active span {
+  background-color: black; /* Change color on active state */
+}
+
+@media (max-width: 600px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .cssflex {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    background-color: #282c34;
+    position: fixed;
+    top: -100%; /* Slide down from the top */
+    left: 0;
+    height: 100vh;
+    transition: top 0.3s ease-in-out;
+  }
+
+  .cssflex.show {
+    top: 0;
+  }
+
+  .cssflex li {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .cssflex li a {
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+  }
+  
+
+  .cssflex li a:hover {
+    border-color: white;
+  }
+  .cccc{
+    border: 3px solid rgb(240, 239, 239);
+  }
+}
